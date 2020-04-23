@@ -1,4 +1,6 @@
 module.exports = {
+  publicPath: '',
+  outputDir: './www',
   devServer: {
     open: true,
     port: '8006',

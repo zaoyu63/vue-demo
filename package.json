@@ -1,16 +1,20 @@
 {
-  "name": "vue-demo",
-  "version": "0.1.0",
+  "name": "cordova0vue-demo",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "andriod": "vue-cli-service build && rm -rf platforms/addriod && cordova platform add andriod --save",
+    "ios": "vue-cli-service build && rm -rf platforms/ios && cordova platform add ios --save"
   },
   "dependencies": {
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "cordova-android": "8.1.0",
+    "cordova-ios": "5.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",
@@ -21,6 +25,17 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "phonegap-plugin-barcodescanner": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
   }
 }
